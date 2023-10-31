@@ -10,8 +10,10 @@
     "component:headless": "cypress run --component"
   },
   "dependencies": {
+    "bootstrap": "^5.3.2",
     "next": "latest",
     "react": "18.2.0",
+    "react-code-blocks": "^0.1.4",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
