@@ -1,15 +1,16 @@
 import { useState, useRef, useEffect } from "react";
 
 function VideoPlayer({ src, isPlaying }) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
+    if (ref?.current === null) return;
     if (isPlaying) {
-      ref.current.play();
+      ref?.current.play();
     } else {
-      ref.current.pause();
+      ref?.current.pause();
     }
-  });
+  }, [isPlaying]);
 
   return (
     <>

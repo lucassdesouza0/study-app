@@ -1,7 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+interface Todo {
+  id: string;
+  name: string;
+  text: string;
+}
 
 const TodoList = () => {
-  const [todos, setTodos] = useState<[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
 
   const fetchTodos = async () => {
     const resp = await fetch("http://localhost:3000/api/todoList");
@@ -137,7 +143,6 @@ const TodoList = () => {
                     <input
                       type="text"
                       className="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3"
-                      readonly
                       value={todo.name}
                       title={todo.name}
                     />
