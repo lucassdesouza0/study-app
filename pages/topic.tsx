@@ -18,6 +18,14 @@ export default function Topic() {
             <p>Cypress will test if this link is working.</p>
           </Link> */}
 
+          <a href="/todo-list" className={styles.card}>
+            <h2>Todo List &rarr;</h2>
+          </a>
+
+          <a href="/todo-list-fast" className={styles.card}>
+            <h2>Todo List With Performance Enhancements &rarr;</h2>
+          </a>
+
           {/* <a href="/topic" className={styles.card}>
             <h2>React &rarr;</h2>
             <p>Performance, best practices and new features.</p>
